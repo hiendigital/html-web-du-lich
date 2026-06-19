@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trường Thành Travel - Tour du lịch trong nước và quốc tế</title>
+  <meta name="description" content="Đặt phòng Flamingo Resort, du thuyền Vịnh Lan Hạ, khách sạn Cát Bà, tour Sapa giá tốt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span><i class="fa-solid fa-phone"></i> Hotline: <a href="tel:0929742888">0929 742 888</a></span>
+        <span><i class="fa-solid fa-envelope"></i> info@truongthanhtravel.com</span>
+      </div>
+      <div class="topbar__right">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <span class="topbar__divider"></span>
+        <a href="#"><i class="fa-regular fa-user"></i> Đăng nhập</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-plane-departure"></i>
+        <span>Trường Thành<small>TRAVEL</small></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#" class="active">Trang chủ</a></li>
+          <li><a href="#flamingo">Flamingo Resort</a></li>
+          <li class="has-sub">
+            <a href="#lanha">Du thuyền Lan Hạ <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#lanha">Tour trọn ngày</a></li>
+              <li><a href="#sunset">Tour ngắm hoàng hôn</a></li>
+              <li><a href="#lanha">Du thuyền nghỉ đêm</a></li>
+            </ul>
+          </li>
+          <li><a href="#catba">Khách sạn Cát Bà</a></li>
+          <li><a href="#sapa">Sapa</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#" class="icon-btn"><i class="fa-regular fa-heart"></i><span class="badge">2</span></a>
+        <a href="#" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide active" style="background-image:linear-gradient(rgba(0,40,70,.45),rgba(0,40,70,.55)),url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80')">
+        <div class="hero__content">
+          <p class="hero__tag">Khám phá Việt Nam</p>
+          <h1>Tour du lịch trong nước &amp; quốc tế</h1>
+          <p class="hero__sub">Hành trình trọn vẹn - Trải nghiệm đáng nhớ cùng Trường Thành Travel</p>
+          <a href="#lanha" class="btn btn--primary">Xem tour ngay</a>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image:linear-gradient(rgba(0,40,70,.45),rgba(0,40,70,.55)),url('https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1600&q=80')">
+        <div class="hero__content">
+          <p class="hero__tag">Vịnh Lan Hạ</p>
+          <h1>Du thuyền sang trọng Lan Hạ</h1>
+          <p class="hero__sub">Đưa đón miễn phí - Lịch khởi hành hàng ngày</p>
+          <a href="#lanha" class="btn btn--primary">Đặt du thuyền</a>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image:linear-gradient(rgba(0,40,70,.45),rgba(0,40,70,.55)),url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1600&q=80')">
+        <div class="hero__content">
+          <p class="hero__tag">Sapa - Mây trời</p>
+          <h1>Chinh phục Tây Bắc hùng vĩ</h1>
+          <p class="hero__sub">Ruộng bậc thang - Bản làng - Đỉnh Fansipan</p>
+          <a href="#sapa" class="btn btn--primary">Khám phá Sapa</a>
+        </div>
+      </div>
+    </div>
+    <button class="hero__nav hero__nav--prev" id="heroPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="hero__nav hero__nav--next" id="heroNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="hero__dots" id="heroDots"></div>
+  </section>
+
+  <!-- ===== SEARCH BAR ===== -->
+  <section class="search">
+    <div class="container">
+      <form class="search__box" id="searchForm">
+        <div class="search__field">
+          <label><i class="fa-solid fa-location-dot"></i> Điểm đến</label>
+          <select>
+            <option>Tất cả điểm đến</option>
+            <option>Vịnh Lan Hạ</option>
+            <option>Cát Bà</option>
+            <option>Sapa</option>
+            <option>Flamingo Resort</option>
+          </select>
+        </div>
+        <div class="search__field datepicker" id="datepicker">
+          <label><i class="fa-solid fa-calendar-day"></i> Ngày khởi hành</label>
+          <button type="button" class="datepicker__input" id="dpInput">
+            <span id="dpText" class="placeholder">Chọn ngày</span>
+            <i class="fa-solid fa-calendar-day"></i>
+          </button>
+          <input type="hidden" name="departDate" id="dpValue" />
+          <div class="calendar" id="calendar" hidden>
+            <div class="calendar__head">
+              <button type="button" class="calendar__nav" id="calPrev"><i class="fa-solid fa-chevron-left"></i></button>
+              <strong id="calTitle"></strong>
+              <button type="button" class="calendar__nav" id="calNext"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar__weekdays">
+              <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+            </div>
+            <div class="calendar__days" id="calDays"></div>
+            <div class="calendar__legend">
+              <span><i class="dot dot--today"></i> Hôm nay</span>
+              <span><i class="dot dot--depart"></i> Có tour</span>
+            </div>
+          </div>
+        </div>
+        <div class="search__field">
+          <label><i class="fa-solid fa-bus"></i> Điểm đón</label>
+          <select>
+            <option>Hà Nội</option>
+            <option>Hải Phòng</option>
+            <option>Quảng Ninh</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary search__btn"><i class="fa-solid fa-magnifying-glass"></i> Tìm tour</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features">
+    <div class="container features__grid">
+      <div class="feature">
+        <i class="fa-solid fa-medal"></i>
+        <div><h4>Uy tín hàng đầu</h4><p>Hơn 10 năm kinh nghiệm</p></div>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-tags"></i>
+        <div><h4>Giá tốt nhất</h4><p>Cam kết giá ưu đãi</p></div>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-headset"></i>
+        <div><h4>Hỗ trợ 24/7</h4><p>Tư vấn mọi lúc mọi nơi</p></div>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><h4>An toàn tuyệt đối</h4><p>Bảo hiểm du lịch đầy đủ</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLAMINGO RESORT ===== -->
+  <section class="section" id="flamingo">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Đặt phòng Flamingo Resort</h2>
+        <p class="section__desc">Nghỉ dưỡng đẳng cấp 5 sao bên bờ biển</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Flamingo Đại Lải - Villa 2PN" loading="lazy">
+            <span class="card__badge">-15%</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>2 đêm</span>
+              <span><i class="fa-solid fa-circle-check"></i>Hồ bơi</span>
+              <span><i class="fa-solid fa-circle-check"></i>Ăn sáng</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Flamingo Đại Lải - Villa 2PN</a></h3>
+            <div class="card__rating">★★★★★ <span>(124 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>3.200.000₫</del><strong>2.700.000₫</strong> <small>/ đêm</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Flamingo Cát Bà - Phòng Deluxe" loading="lazy">
+            <span class="card__badge">HOT</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>1 đêm</span>
+              <span><i class="fa-solid fa-circle-check"></i>View biển</span>
+              <span><i class="fa-solid fa-circle-check"></i>Bể bơi</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Flamingo Cát Bà - Phòng Deluxe</a></h3>
+            <div class="card__rating">★★★★★ <span>(98 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>2.500.000₫</del><strong>1.890.000₫</strong> <small>/ đêm</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80" alt="Flamingo Suite - Hướng vịnh" loading="lazy">
+            <span class="card__badge">-18%</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>2 đêm</span>
+              <span><i class="fa-solid fa-circle-check"></i>Spa</span>
+              <span><i class="fa-solid fa-circle-check"></i>Gym</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Flamingo Suite - Hướng vịnh</a></h3>
+            <div class="card__rating">★★★★★ <span>(76 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>2.900.000₫</del><strong>2.350.000₫</strong> <small>/ đêm</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Flamingo Family Resort" loading="lazy">
+            <span class="card__badge">Mới</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>2 đêm</span>
+              <span><i class="fa-solid fa-circle-check"></i>4 người</span>
+              <span><i class="fa-solid fa-circle-check"></i>Ăn sáng</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Flamingo Family Resort</a></h3>
+            <div class="card__rating">★★★★★ <span>(52 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>3.000.000₫</del><strong>2.500.000₫</strong> <small>/ đêm</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAN HA FULL DAY ===== -->
+  <section class="section section--alt" id="lanha">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Du thuyền Vịnh Lan Hạ - Trọn ngày</h2>
+        <p class="section__desc">Đưa đón miễn phí - Khởi hành hàng ngày</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80" alt="Du thuyền Lan Hạ Premium - Trọn ngày" loading="lazy">
+            <span class="card__badge">Đón miễn phí</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>Cả ngày</span>
+              <span><i class="fa-solid fa-circle-check"></i>6h-17h</span>
+              <span><i class="fa-solid fa-circle-check"></i>Buffet</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Du thuyền Lan Hạ Premium - Trọn ngày</a></h3>
+            <div class="card__rating">★★★★★ <span>(186 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>1.350.000₫</del><strong>1.150.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=600&q=80" alt="Du thuyền Sealife - Khám phá vịnh" loading="lazy">
+            <span class="card__badge">-21%</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>Cả ngày</span>
+              <span><i class="fa-solid fa-circle-check"></i>Kayak</span>
+              <span><i class="fa-solid fa-circle-check"></i>Ăn trưa</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Du thuyền Sealife - Khám phá vịnh</a></h3>
+            <div class="card__rating">★★★★★ <span>(143 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>950.000₫</del><strong>750.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&w=600&q=80" alt="Du thuyền Catba Express" loading="lazy">
+            <span class="card__badge">Bán chạy</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>Cả ngày</span>
+              <span><i class="fa-solid fa-circle-check"></i>Hằng ngày</span>
+              <span><i class="fa-solid fa-circle-check"></i>Hải sản</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Du thuyền Catba Express</a></h3>
+            <div class="card__rating">★★★★★ <span>(167 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>800.000₫</del><strong>600.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Du thuyền Lavender Cruise" loading="lazy">
+            <span class="card__badge">-19%</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>Cả ngày</span>
+              <span><i class="fa-solid fa-circle-check"></i>Tắm biển</span>
+              <span><i class="fa-solid fa-circle-check"></i>Buffet</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Du thuyền Lavender Cruise</a></h3>
+            <div class="card__rating">★★★★★ <span>(112 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>1.100.000₫</del><strong>890.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUNSET TOURS ===== -->
+  <section class="section" id="sunset">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Tour ngắm hoàng hôn - Nửa ngày</h2>
+        <p class="section__desc">Trải nghiệm hoàng hôn lãng mạn trên vịnh</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=600&q=80" alt="Tour hoàng hôn Lan Hạ - Nửa ngày" loading="lazy">
+            <span class="card__badge">Lãng mạn</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>3 giờ</span>
+              <span><i class="fa-solid fa-circle-check"></i>15h-18h</span>
+              <span><i class="fa-solid fa-circle-check"></i>Cocktail</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Tour hoàng hôn Lan Hạ - Nửa ngày</a></h3>
+            <div class="card__rating">★★★★★ <span>(95 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>550.000₫</del><strong>390.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Sunset Cruise - Ngắm hoàng hôn" loading="lazy">
+            <span class="card__badge">-30%</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>4 giờ</span>
+              <span><i class="fa-solid fa-circle-check"></i>14h-18h</span>
+              <span><i class="fa-solid fa-circle-check"></i>Tiệc nhẹ</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Sunset Cruise - Ngắm hoàng hôn</a></h3>
+            <div class="card__rating">★★★★★ <span>(128 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>650.000₫</del><strong>450.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="Tour câu mực đêm + hoàng hôn" loading="lazy">
+            <span class="card__badge">Trải nghiệm</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>4 giờ</span>
+              <span><i class="fa-solid fa-circle-check"></i>Câu mực</span>
+              <span><i class="fa-solid fa-circle-check"></i>BBQ</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Tour câu mực đêm + hoàng hôn</a></h3>
+            <div class="card__rating">★★★★★ <span>(81 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>700.000₫</del><strong>520.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1516546453174-5e1098a4b4af?auto=format&fit=crop&w=600&q=80" alt="Romantic Sunset cho cặp đôi" loading="lazy">
+            <span class="card__badge">Couple</span>
+            <a href="product.html" class="card__fav"><i class="fa-regular fa-heart"></i></a>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span><i class="fa-solid fa-circle-check"></i>3 giờ</span>
+              <span><i class="fa-solid fa-circle-check"></i>2 người</span>
+              <span><i class="fa-solid fa-circle-check"></i>Rượu vang</span>
+            </div>
+            <h3 class="card__title"><a href="product.html">Romantic Sunset cho cặp đôi</a></h3>
+            <div class="card__rating">★★★★★ <span>(64 đánh giá)</span></div>
+            <div class="card__foot">
+              <div class="card__price"><del>750.000₫</del><strong>590.000₫</strong> <small>/ khách</small></div>
+              <a href="product.html" class="btn btn--primary btn--sm">Đặt tour</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTINATIONS ===== -->
+  <section class="section section--alt" id="catba">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Điểm đến nổi bật</h2>
+        <p class="section__desc">Những hành trình được yêu thích nhất</p>
+      </div>
+      <div class="dest">
+        <div class="dest__item">
+          <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Vịnh Lan Hạ" loading="lazy">
+          <div class="dest__cap"><h3>Vịnh Lan Hạ</h3><span>15+ tour du thuyền</span></div>
+        </div>
+        <div class="dest__item">
+          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Đảo Cát Bà" loading="lazy">
+          <div class="dest__cap"><h3>Đảo Cát Bà</h3><span>Khách sạn &amp; nghỉ dưỡng</span></div>
+        </div>
+        <div class="dest__item">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=600&q=80" alt="Sapa" loading="lazy">
+          <div class="dest__cap"><h3>Sapa</h3><span>Tour Tây Bắc</span></div>
+        </div>
+        <div class="dest__item">
+          <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=600&q=80" alt="Flamingo Resort" loading="lazy">
+          <div class="dest__cap"><h3>Flamingo Resort</h3><span>Nghỉ dưỡng 5 sao</span></div>
+        </div>
+        <div class="dest__item">
+          <img src="https://images.unsplash.com/photo-1573490547654-f23bfd5a96f5?auto=format&fit=crop&w=600&q=80" alt="Vịnh Hạ Long" loading="lazy">
+          <div class="dest__cap"><h3>Vịnh Hạ Long</h3><span>Kỳ quan thế giới</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta" id="sapa">
+    <div class="container cta__inner">
+      <div>
+        <h2>Sẵn sàng cho chuyến đi tiếp theo?</h2>
+        <p>Liên hệ ngay để được tư vấn lịch trình & nhận ưu đãi đặc biệt.</p>
+      </div>
+      <a href="tel:0929742888" class="btn btn--white"><i class="fa-solid fa-phone"></i> Gọi 0929 742 888</a>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Khách hàng nói gì về chúng tôi</h2>
+        <p class="section__desc">Hơn 50.000 khách hàng hài lòng mỗi năm</p>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Chuyến du thuyền Lan Hạ tuyệt vời, nhân viên nhiệt tình, đồ ăn ngon. Sẽ quay lại!"</p>
+          <div class="review__user">
+            <div class="review__avatar">H</div>
+            <div><h5>Nguyễn Thu Hà</h5><span>Khách Hà Nội</span></div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Đặt phòng Flamingo qua Trường Thành rất nhanh, giá tốt hơn nhiều nơi khác."</p>
+          <div class="review__user">
+            <div class="review__avatar">Đ</div>
+            <div><h5>Trần Minh Đức</h5><span>Khách Hải Phòng</span></div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Tour hoàng hôn cực kỳ lãng mạn, hướng dẫn viên dễ thương, đáng đồng tiền."</p>
+          <div class="review__user">
+            <div class="review__avatar">A</div>
+            <div><h5>Lê Phương Anh</h5><span>Khách TP.HCM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#" class="logo logo--light">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Trường Thành<small>TRAVEL</small></span>
+        </a>
+        <p class="footer__about">Công ty TNHH Du lịch Trường Thành - Đối tác đồng hành cho mọi hành trình của bạn.</p>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Đường Du Lịch, Quận Hoàn Kiếm, Hà Nội</p>
+        <p><i class="fa-solid fa-phone"></i> 0929 742 888</p>
+        <p><i class="fa-solid fa-envelope"></i> info@truongthanhtravel.com</p>
+        <p class="footer__license">GPKD số: 0123456789 - Cấp ngày 01/01/2015</p>
+      </div>
+      <div class="footer__col">
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#flamingo">Flamingo Resort</a></li>
+          <li><a href="#lanha">Du thuyền Lan Hạ</a></li>
+          <li><a href="#catba">Khách sạn Cát Bà</a></li>
+          <li><a href="#sapa">Tour Sapa</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Hướng dẫn đặt tour</a></li>
+          <li><a href="#">Chính sách hoàn hủy</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Đăng ký nhận tin</h4>
+        <p>Nhận ưu đãi & thông tin tour mới nhất.</p>
+        <form class="footer__news" id="newsForm">
+          <input type="email" placeholder="Email của bạn" required />
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <div class="footer__social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 Trường Thành Travel. Bản quyền thuộc về Công ty TNHH Du lịch Trường Thành.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WIDGETS ===== -->
+  <div class="floating">
+    <a href="tel:0929742888" class="float-btn float-btn--phone" title="Gọi ngay"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="float-btn float-btn--zalo" title="Zalo"><span>Zalo</span></a>
+    <a href="#" class="float-btn float-btn--mess" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+  </div>
+  <button class="back-top" id="backTop" aria-label="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
