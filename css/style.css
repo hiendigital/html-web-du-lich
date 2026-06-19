@@ -466,5 +466,5 @@ img{max-width:100%;display:block}
   .has-sub.open .submenu{display:block}
   .nav-toggle{display:block}
 }
-.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:.3s;z-index:110}
+.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:.3s;z-index:76}
 .nav-overlay.show{opacity:1;visibility:visible}
